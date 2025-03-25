@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* <div class="text-center"> *@
+@*     <h1 class="display-4">Welcome</h1> *@
+@*     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+@* </div> *@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Leave Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fbeee6; /* Light background */
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header (Optional, if needed in future) */
+        .header {
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+            .header h1 {
+                font-size: 36px;
+                margin-bottom: 5px;
+            }
+
+            .header p {
+                font-size: 18px;
+            }
+        /* Welcome Section */
+        .welcome-message {
+            text-align: center;
+            padding: 50px 0;
+            font-size: 20px;
+            color: #7b241c;
+        }
+        /* New styling for the paragraph to make it stand out */
+        .welcome-text {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #7b241c;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome-message">
+            <h2>Hello, Employee</h2>
+            <p class="welcome-text">
+                Welcome back to the Leave Management System. Here, you can manage your leave requests, check statuses, and much more.
+            </p>
+        </section>
+    </div>
+</body>
+</html>
+
+
+

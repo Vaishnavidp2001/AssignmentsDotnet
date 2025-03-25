@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model LeaveManagementSystem.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "LogIn";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+                <div class="card-header custom-header text-center">
+                    <h2>LogIn</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="LogIn">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input asp-for="RememberMe" class="form-check-input" />
+                            <label asp-for="RememberMe" class="form-check-label">
+                                @Html.DisplayNameFor(Model => Model.RememberMe)
+                            </label>
+                        </div>
+                        <div class="d-grid">
+                            <input type="submit" value="Login" class="btn custom-btn" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    .custom-header {
+        background-color: #641e16; /* Change this to your desired header color */
+        color: white;
+    }
+
+    .custom-btn {
+        background-color: #641e16; /* Change this to your desired button color */
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .custom-btn:hover {
+            background-color: #e6b0aa; /* Darker shade on hover */
+        }
+</style>
