@@ -1,0 +1,78 @@
+<div class="login-container">
+    <h2>Register</h2>
+  
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm)">
+      
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          formControlName="firstName"
+          class="form-control"
+        />
+        <div class="error" *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.invalid">
+          First Name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          id="lastName"
+          formControlName="lastName"
+          class="form-control"
+        />
+        <div class="error" *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.invalid">
+          Last Name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          class="form-control"
+        />
+        <div class="error" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+          Valid Email is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="userName">Username</label>
+        <input
+          type="text"
+          id="userName"
+          formControlName="userName"
+          class="form-control"
+        />
+        <div class="error" *ngIf="registerForm.get('userName')?.touched && registerForm.get('userName')?.invalid">
+          Username is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          class="form-control"
+        />
+        <div class="error" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+          Password is required.
+        </div>
+      </div>
+  
+      <div *ngIf="errorMsg" class="error">
+        {{ errorMsg }}
+      </div>
+  
+      <button type="submit" [disabled]="registerForm.invalid">Register</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,35 @@
+<!-- <div *ngIf="artworks.length > 0; else noArtworks">
+    <div *ngFor="let artwork of artworks">
+      <h3>{{ artwork.title }}</h3>
+      <p>{{ artwork.description }}</p>
+      <p>Created on: {{ artwork.creationDate | date: 'mediumDate' }}</p>
+      <img [src]="artwork.imageURL" alt="{{ artwork.title }}" width="200">
+    </div>
+  </div> -->
+  
+  <!-- Show this message when no artworks are available -->
+  <!-- <ng-template #noArtworks>
+    <p style="color: red;">⚠ No artworks available. Please add artworks first.</p>
+  </ng-template> -->
+
+
+
+  <div class="container">
+    <div *ngIf="artworks.length > 0; else noArtworks" class="artworks">
+      <div *ngFor="let artwork of artworks" class="card">
+        <img [src]="artwork.imageURL" alt="{{ artwork.title }}" class="card-img-top">
+        <div class="card-body">
+          <h3>{{ artwork.title }}</h3>
+          <p>{{ artwork.description }}</p>
+          <p>Created on: {{ artwork.creationDate | date: 'mediumDate' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Show this message when no artworks are available -->
+  <ng-template #noArtworks>
+    <p class="no-artworks">⚠ No artworks available. Please add artworks first.</p>
+  </ng-template>
+  
+  

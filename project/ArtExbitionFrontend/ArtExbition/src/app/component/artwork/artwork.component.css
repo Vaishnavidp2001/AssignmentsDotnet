@@ -1,0 +1,83 @@
+/* Main container */
+.container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Artworks Grid */
+  .artworks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    justify-items: center;
+  }
+  
+  /* Card Styling */
+  .card {
+    width: 100%;
+    max-width: 280px; /* Restrict max width */
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    background: #ffffff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image Styling */
+  .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Card Body */
+  .card-body {
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  
+  /* Title */
+  h3 {
+    font-size: 18px;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  /* Description */
+  p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* No Artworks Message */
+  .no-artworks {
+    text-align: center;
+    font-size: 18px;
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .artworks {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+  }
+  
